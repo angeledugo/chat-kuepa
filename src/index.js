@@ -12,7 +12,8 @@ const server = http.createServer(app);
 const io = socketio.listen(server);
 
 // Conexion a la base de datos
-mongoose.connect('mongodb://localhost/chat-database',{ useNewUrlParser: true,useUnifiedTopology: true })
+const uri = "mongodb+srv://db_angel:Alpha_2020@cluster0.kr2i5.mongodb.net/chat-database";
+mongoose.connect(uri,{ useNewUrlParser: true,useUnifiedTopology: true })
     .then(db => console.log('db is conected'))
     .catch(err => console.log(err));
 
