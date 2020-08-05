@@ -29,6 +29,6 @@ app.use(express.static(path.join(__dirname,'public')));
 
 
 // Starting Server
-server.listen(app.get('port'), () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log("server on port ",app.get('port'));
 });
