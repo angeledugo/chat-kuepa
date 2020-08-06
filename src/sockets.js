@@ -5,7 +5,6 @@ module.exports = function(io) {
 
     let usernames = {};
     io.on('connection', async socket => {
-        console.log("nuevo usuario conectado");
 
         let messages = await Chat.find({}).limit(8);
 
